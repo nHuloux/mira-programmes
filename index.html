@@ -92,17 +92,24 @@
         .hours-col { width: 8%; text-align: center; }
         .summary-col { width: 44%; color: #555; }
         
+        /* Couleurs des Unités d'Enseignement */
+        td.ue-info { background-color: #e0f2fe; color: #0369a1; font-weight: 600; }
+        td.ue-phys { background-color: #dcfce7; color: #15803d; font-weight: 600; }
+        td.ue-robo { background-color: #ffedd5; color: #c2410c; font-weight: 600; }
+        td.ue-entr { background-color: #f3f4f6; color: #4b5563; font-weight: 600; }
+        td.ue-shs  { background-color: #fce7f3; color: #be185d; font-weight: 600; }
+
         @media (max-width: 768px) {
             table, thead, tbody, th, td, tr { display: block; }
             th { position: absolute; top: -9999px; left: -9999px; }
             tr { border: 1px solid #ccc; margin-bottom: 15px; border-radius: 5px; overflow: hidden; }
             td { border: none; border-bottom: 1px solid #eee; position: relative; padding-left: 40%; text-align: left !important; }
-            td:before { position: absolute; top: 14px; left: 15px; width: 35%; padding-right: 10px; white-space: nowrap; font-weight: 600; color: var(--primary-color); }
+            td:before { position: absolute; top: 14px; left: 15px; width: 35%; padding-right: 10px; white-space: nowrap; font-weight: 600; color: inherit; }
             td:nth-of-type(1):before { content: "Unité d'Enseignement"; }
-            td:nth-of-type(2):before { content: "Intitulé de l'UC"; }
-            td:nth-of-type(3):before { content: "ECTS"; }
-            td:nth-of-type(4):before { content: "Heures"; }
-            td:nth-of-type(5):before { content: "Résumé"; }
+            td:nth-of-type(2):before { content: "Intitulé de l'UC"; color: var(--primary-color); }
+            td:nth-of-type(3):before { content: "ECTS"; color: var(--primary-color); }
+            td:nth-of-type(4):before { content: "Heures"; color: var(--primary-color); }
+            td:nth-of-type(5):before { content: "Résumé"; color: var(--primary-color); }
             .ue-col, .course-col, .ects-col, .hours-col, .summary-col { width: 100%; }
         }
     </style>
@@ -132,27 +139,27 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Algèbre 1</td><td>2</td><td>27,0h</td><td>Logique, algèbre ensembliste, calcul algébrique, géométrie, trigonométrie et nombres complexes.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Analyse 1</td><td>2</td><td>39,0h</td><td>Nombres réels, suites numériques, fonctions, limites, calcul différentiel/intégral et équations différentielles.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Algorithmique</td><td>2</td><td>27,0h</td><td>Architecture matérielle, algèbre de Boole, boucles, récursivité, tableaux statiques et structures.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Prog. procédurale 1</td><td>1,5</td><td>22,5h</td><td>Langage C sous Linux, compilation, itérations, fonctions, vecteurs, chaînes de caractères et structures.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Commande UNIX</td><td>1,5</td><td>24,0h</td><td>Navigation dans l'arborescence, manipulation de fichiers, gestion de processus, scripts Shell et versionning (Git).</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Réseaux informatiques</td><td>2</td><td>35,0h</td><td>Fondamentaux des réseaux, modèles OSI et TCP/IP, adressage IPv4 et principes de routage.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Intro. aux sciences de l'ingénieur</td><td>1,5</td><td>30,0h</td><td>Analyse fonctionnelle (pieuvre, FAST), chaînes d'information/énergie, expérimentation et analyse des écarts.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Mod. des systèmes asservis</td><td>0,5</td><td>12,0h</td><td>Modélisation par schéma bloc des systèmes bouclés, fonction de transfert, indicateurs de performances.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Optique géométrique</td><td>1</td><td>18,0h</td><td>Lois de Snell-Descartes, formation d'images, miroirs sphériques/plans et lentilles minces.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Mécanique du point et oscillateurs</td><td>1</td><td>24,0h</td><td>Cinématique, lois de Newton, énergie mécanique, oscillateur harmonique et étude de l'équilibre.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Intro. thermodynamique et fluides</td><td>2</td><td>30,0h</td><td>Variables d'état, principes de la thermodynamique, machines thermiques et pression/statique des fluides.</td></tr>
-<tr><td>Robotique</td><td>De la puce au robot</td><td>0,5</td><td>6,0h</td><td>Histoire des unités de calcul, architecture des puces et SoC, démontage d'un système robotique.</td></tr>
-<tr><td>Robotique</td><td>Électrocinétique</td><td>1,5</td><td>27,0h</td><td>Lois de l'électrocinétique, théorèmes (Thévenin, Norton, Millman), dipôles RC, RL, LC, et RLC.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Initiation gestion de projet</td><td>1</td><td>21,0h</td><td>Planification de projet, outils collaboratifs, rétroplanning, distribution des tâches et suivi de performance.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Projet fil rouge 1A (S1)</td><td>3,5</td><td>9,5h</td><td>Identification de besoins pour entreprises partenaires, itération d'idées, cahier des charges et pitch final.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Démarche apprenante</td><td>1,5</td><td>15,0h</td><td>Processus d'apprentissage, gestion du stress/temps, prise de notes, techniques de résolution de problèmes.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Dév. durable : prise de conscience</td><td>0,5</td><td>6,0h</td><td>Animation de la Fresque du Climat et de l'atelier Deep Time Walk pour comprendre les enjeux climatiques.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV1: Anglais</td><td>2</td><td>27,0h</td><td>Compréhension/expression orale et écrite, préparation TOEIC (B2), communication et vocabulaire métier.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV2: Italien/Espagnol/Corse</td><td>2</td><td>27,0h</td><td>Renforcement linguistique, expression professionnelle et vocabulaire technique en langue 2.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV3: Option</td><td>1</td><td>27,0h</td><td>Ouverture culturelle et plurilinguisme (Italien, Espagnol, Corse, Langue des signes, FLE, soutien Anglais).</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Activités physiques et sportives</td><td>1</td><td>24,0h</td><td>Apprentissage sportif, gestion du stress et esprit de compétition.</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Algèbre 1</td><td>2</td><td>27,0h</td><td>Logique, algèbre ensembliste, calcul algébrique, géométrie, trigonométrie et nombres complexes.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Analyse 1</td><td>2</td><td>39,0h</td><td>Nombres réels, suites numériques, fonctions, limites, calcul différentiel/intégral et équations différentielles.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Algorithmique</td><td>2</td><td>27,0h</td><td>Architecture matérielle, algèbre de Boole, boucles, récursivité, tableaux statiques et structures.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Prog. procédurale 1</td><td>1,5</td><td>22,5h</td><td>Langage C sous Linux, compilation, itérations, fonctions, vecteurs, chaînes de caractères et structures.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Commande UNIX</td><td>1,5</td><td>24,0h</td><td>Navigation dans l'arborescence, manipulation de fichiers, gestion de processus, scripts Shell et versionning (Git).</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Réseaux informatiques</td><td>2</td><td>35,0h</td><td>Fondamentaux des réseaux, modèles OSI et TCP/IP, adressage IPv4 et principes de routage.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Intro. aux sciences de l'ingénieur</td><td>1,5</td><td>30,0h</td><td>Analyse fonctionnelle (pieuvre, FAST), chaînes d'information/énergie, expérimentation et analyse des écarts.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Mod. des systèmes asservis</td><td>0,5</td><td>12,0h</td><td>Modélisation par schéma bloc des systèmes bouclés, fonction de transfert, indicateurs de performances.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Optique géométrique</td><td>1</td><td>18,0h</td><td>Lois de Snell-Descartes, formation d'images, miroirs sphériques/plans et lentilles minces.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Mécanique du point et oscillateurs</td><td>1</td><td>24,0h</td><td>Cinématique, lois de Newton, énergie mécanique, oscillateur harmonique et étude de l'équilibre.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Intro. thermodynamique et fluides</td><td>2</td><td>30,0h</td><td>Variables d'état, principes de la thermodynamique, machines thermiques et pression/statique des fluides.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>De la puce au robot</td><td>0,5</td><td>6,0h</td><td>Histoire des unités de calcul, architecture des puces et SoC, démontage d'un système robotique.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Électrocinétique</td><td>1,5</td><td>27,0h</td><td>Lois de l'électrocinétique, théorèmes (Thévenin, Norton, Millman), dipôles RC, RL, LC, et RLC.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Initiation gestion de projet</td><td>1</td><td>21,0h</td><td>Planification de projet, outils collaboratifs, rétroplanning, distribution des tâches et suivi de performance.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Projet fil rouge 1A (S1)</td><td>3,5</td><td>9,5h</td><td>Identification de besoins pour entreprises partenaires, itération d'idées, cahier des charges et pitch final.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Démarche apprenante</td><td>1,5</td><td>15,0h</td><td>Processus d'apprentissage, gestion du stress/temps, prise de notes, techniques de résolution de problèmes.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Dév. durable : prise de conscience</td><td>0,5</td><td>6,0h</td><td>Animation de la Fresque du Climat et de l'atelier Deep Time Walk pour comprendre les enjeux climatiques.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV1: Anglais</td><td>2</td><td>27,0h</td><td>Compréhension/expression orale et écrite, préparation TOEIC (B2), communication et vocabulaire métier.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV2: Italien/Espagnol/Corse</td><td>2</td><td>27,0h</td><td>Renforcement linguistique, expression professionnelle et vocabulaire technique en langue 2.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV3: Option</td><td>1</td><td>27,0h</td><td>Ouverture culturelle et plurilinguisme (Italien, Espagnol, Corse, Langue des signes, FLE, soutien Anglais).</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Activités physiques et sportives</td><td>1</td><td>24,0h</td><td>Apprentissage sportif, gestion du stress et esprit de compétition.</td></tr>
 
                     </tbody>
                 </table>
@@ -171,24 +178,24 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Algèbre 2</td><td>1,5</td><td>33,0h</td><td>Systèmes linéaires, pivot de Gauss, structures algébriques, espaces vectoriels et calcul matriciel.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Analyse 2</td><td>1,5</td><td>33,0h</td><td>Analyse asymptotique (développements limités), étude de séries et calcul d'intégration (Riemann).</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Probabilités et statistiques</td><td>1</td><td>21,0h</td><td>Dénombrement, formules de probabilité, variables aléatoires, statistiques descriptives et inférentielles.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Algorithmique avancée</td><td>3</td><td>44,0h</td><td>Complexité, tris, structures récursives, arbres, graphes (Dijkstra, Kruskal, Ford-Fulkerson) et maps.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Prog. Procédurale 2</td><td>3</td><td>40,5h</td><td>Compilation séparée, Makefiles, pointeurs, listes, piles, files, arbres binaires/AVL et mini-projet C.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Méc. référentiels non galiléens</td><td>2</td><td>33,0h</td><td>Cinématique, moment cinétique, forces d'inertie, gravitation terrestre, systèmes à deux corps et lois de Kepler.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Électrostatique et magnétostatique</td><td>2</td><td>33,0h</td><td>Opérateurs (gradient), champ/potentiel électrostatique, lois de Biot et Savart, théorèmes de Gauss et Ampère.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Automatique</td><td>2</td><td>31,5h</td><td>Transformée de Laplace, fonctions de transfert, formule de Black, théorèmes de la valeur initiale/finale.</td></tr>
-<tr><td>Robotique</td><td>Analyse de systèmes</td><td>4</td><td>42,0h</td><td>Modélisation des liaisons mécaniques et électroniques usuelles, principe fondamental de la dynamique, TP.</td></tr>
-<tr><td>Robotique</td><td>Intro. aux systèmes robotiques</td><td>1</td><td>27,0h</td><td>Architectures/composants de robots roulants, volants et bras robotiques, modélisation cinématique, TP.</td></tr>
-<tr><td>Robotique</td><td>Électrocinétique : RSF</td><td>2</td><td>33,0h</td><td>Régimes variables périodiques, notation complexe, filtres (Bode), quadripôles et amplificateur opérationnel.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Projet fil rouge 1A (S2)</td><td>3</td><td>9,5h</td><td>Preuve de concept, gestion des ressources, ajustement de la planification et présentation client.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Projet Voltaire</td><td>1</td><td>3,0h</td><td>Module d'orthographe et d'expression, préparation d'évaluation par machine (QCM).</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Comm. et expression orale 1</td><td>1</td><td>15,0h</td><td>Prise de parole en public, gestion du stress, structuration d'intervention, langage corporel.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV1: Anglais</td><td>2</td><td>27,0h</td><td>Pratique avancée de la langue, mise en situation professionnelle.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV2: Italien/Espagnol/Corse</td><td>2</td><td>27,0h</td><td>Pratique écrite et orale niveau ingénieur.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV3: Option</td><td>1</td><td>27,0h</td><td>Plurilinguisme, langues diverses (LFS incluse).</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Activités physiques et sportives</td><td>1</td><td>24,0h</td><td>Sport et dépassement de soi.</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Algèbre 2</td><td>1,5</td><td>33,0h</td><td>Systèmes linéaires, pivot de Gauss, structures algébriques, espaces vectoriels et calcul matriciel.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Analyse 2</td><td>1,5</td><td>33,0h</td><td>Analyse asymptotique (développements limités), étude de séries et calcul d'intégration (Riemann).</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Probabilités et statistiques</td><td>1</td><td>21,0h</td><td>Dénombrement, formules de probabilité, variables aléatoires, statistiques descriptives et inférentielles.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Algorithmique avancée</td><td>3</td><td>44,0h</td><td>Complexité, tris, structures récursives, arbres, graphes (Dijkstra, Kruskal, Ford-Fulkerson) et maps.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Prog. Procédurale 2</td><td>3</td><td>40,5h</td><td>Compilation séparée, Makefiles, pointeurs, listes, piles, files, arbres binaires/AVL et mini-projet C.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Méc. référentiels non galiléens</td><td>2</td><td>33,0h</td><td>Cinématique, moment cinétique, forces d'inertie, gravitation terrestre, systèmes à deux corps et lois de Kepler.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Électrostatique et magnétostatique</td><td>2</td><td>33,0h</td><td>Opérateurs (gradient), champ/potentiel électrostatique, lois de Biot et Savart, théorèmes de Gauss et Ampère.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Automatique</td><td>2</td><td>31,5h</td><td>Transformée de Laplace, fonctions de transfert, formule de Black, théorèmes de la valeur initiale/finale.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Analyse de systèmes</td><td>4</td><td>42,0h</td><td>Modélisation des liaisons mécaniques et électroniques usuelles, principe fondamental de la dynamique, TP.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Intro. aux systèmes robotiques</td><td>1</td><td>27,0h</td><td>Architectures/composants de robots roulants, volants et bras robotiques, modélisation cinématique, TP.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Électrocinétique : RSF</td><td>2</td><td>33,0h</td><td>Régimes variables périodiques, notation complexe, filtres (Bode), quadripôles et amplificateur opérationnel.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Projet fil rouge 1A (S2)</td><td>3</td><td>9,5h</td><td>Preuve de concept, gestion des ressources, ajustement de la planification et présentation client.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Projet Voltaire</td><td>1</td><td>3,0h</td><td>Module d'orthographe et d'expression, préparation d'évaluation par machine (QCM).</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Comm. et expression orale 1</td><td>1</td><td>15,0h</td><td>Prise de parole en public, gestion du stress, structuration d'intervention, langage corporel.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV1: Anglais</td><td>2</td><td>27,0h</td><td>Pratique avancée de la langue, mise en situation professionnelle.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV2: Italien/Espagnol/Corse</td><td>2</td><td>27,0h</td><td>Pratique écrite et orale niveau ingénieur.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV3: Option</td><td>1</td><td>27,0h</td><td>Plurilinguisme, langues diverses (LFS incluse).</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Activités physiques et sportives</td><td>1</td><td>24,0h</td><td>Sport et dépassement de soi.</td></tr>
 
                     </tbody>
                 </table>
@@ -212,23 +219,23 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Python</td><td>2</td><td>73,5h</td><td>Algorithmique procédurale, tuples, listes, dictionnaires, gestion d'exceptions, librairies (Pygames) et sockets.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Bases de données</td><td>2</td><td>24,0h</td><td>Modèle Entité-Association (MCD/MLD), normalisation, langages LDD/LMD et requêtes SQL.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Algèbre 3</td><td>2</td><td>27,0h</td><td>Théorie des groupes, corps, anneaux, A-modules, déterminants et diagonalisation de matrices.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Initiation à la sécu. informatique</td><td>1,5</td><td>24,0h</td><td>Menaces/vulnérabilités, politiques de sécurité, services et notions de base de cryptographie.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Ondes mécanique et acoustique</td><td>2</td><td>33,0h</td><td>Corde vibrante (éq. de d'Alembert), lois de Hooke, dispersion, absorption et ondes acoustiques dans un fluide.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Équations de Maxwell</td><td>2</td><td>33,0h</td><td>Densités de charges/courants, équations de Maxwell, énergie électromagnétique, applications statiques.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Métrologie</td><td>1,5</td><td>16,5h</td><td>Principes du mesurage, instruments de contrôle dimensionnel, analyse des tolérances et défauts géométriques.</td></tr>
-<tr><td>Robotique</td><td>Modélisation math des robots</td><td>1,5</td><td>22,5h</td><td>Modèles géométriques directs et inverses, Jacobienne, paramètres de robots roulants et manipulateurs.</td></tr>
-<tr><td>Robotique</td><td>Mécanique du solide</td><td>2,5</td><td>33,0h</td><td>Centre de masse, lois de Coulomb, théorèmes (Koenig, Huygens), énergétique du solide et glissement.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Mini-Entreprise M</td><td>4</td><td>36,0h</td><td>Prototypage d'un projet de création d'entreprise, réalisation de budget, travail en groupe.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Insertion professionnelle 1</td><td>1</td><td>12,0h</td><td>Découverte métier, rédaction de CV et lettres de motivation, méthodologie de recherche.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Initiation à l'éthique</td><td>1</td><td>14,0h</td><td>Concepts de base, théories éthiques, éthique professionnelle, technologique et études de cas.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Laïcité et lutte contre les discriminations</td><td>1</td><td>14,0h</td><td>Histoire et principes de la laïcité, formes de discriminations, dispositifs légaux de lutte.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Anglais</td><td>2</td><td>27,0h</td><td>Pratique professionnelle, TOEIC.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV2: Italien/Espagnol/Corse</td><td>2</td><td>27,0h</td><td>Renforcement B2.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV3 Option</td><td>1</td><td>27,0h</td><td>Apprentissage LSF, FLE, autres langues.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Activités physiques et sportives</td><td>1</td><td>24,0h</td><td>Gestion de l'esprit d'équipe.</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Python</td><td>2</td><td>73,5h</td><td>Algorithmique procédurale, tuples, listes, dictionnaires, gestion d'exceptions, librairies (Pygames) et sockets.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Bases de données</td><td>2</td><td>24,0h</td><td>Modèle Entité-Association (MCD/MLD), normalisation, langages LDD/LMD et requêtes SQL.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Algèbre 3</td><td>2</td><td>27,0h</td><td>Théorie des groupes, corps, anneaux, A-modules, déterminants et diagonalisation de matrices.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Initiation à la sécu. informatique</td><td>1,5</td><td>24,0h</td><td>Menaces/vulnérabilités, politiques de sécurité, services et notions de base de cryptographie.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Ondes mécanique et acoustique</td><td>2</td><td>33,0h</td><td>Corde vibrante (éq. de d'Alembert), lois de Hooke, dispersion, absorption et ondes acoustiques dans un fluide.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Équations de Maxwell</td><td>2</td><td>33,0h</td><td>Densités de charges/courants, équations de Maxwell, énergie électromagnétique, applications statiques.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Métrologie</td><td>1,5</td><td>16,5h</td><td>Principes du mesurage, instruments de contrôle dimensionnel, analyse des tolérances et défauts géométriques.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Modélisation math des robots</td><td>1,5</td><td>22,5h</td><td>Modèles géométriques directs et inverses, Jacobienne, paramètres de robots roulants et manipulateurs.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Mécanique du solide</td><td>2,5</td><td>33,0h</td><td>Centre de masse, lois de Coulomb, théorèmes (Koenig, Huygens), énergétique du solide et glissement.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Mini-Entreprise M</td><td>4</td><td>36,0h</td><td>Prototypage d'un projet de création d'entreprise, réalisation de budget, travail en groupe.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Insertion professionnelle 1</td><td>1</td><td>12,0h</td><td>Découverte métier, rédaction de CV et lettres de motivation, méthodologie de recherche.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Initiation à l'éthique</td><td>1</td><td>14,0h</td><td>Concepts de base, théories éthiques, éthique professionnelle, technologique et études de cas.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Laïcité et lutte contre les discriminations</td><td>1</td><td>14,0h</td><td>Histoire et principes de la laïcité, formes de discriminations, dispositifs légaux de lutte.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Anglais</td><td>2</td><td>27,0h</td><td>Pratique professionnelle, TOEIC.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV2: Italien/Espagnol/Corse</td><td>2</td><td>27,0h</td><td>Renforcement B2.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV3 Option</td><td>1</td><td>27,0h</td><td>Apprentissage LSF, FLE, autres langues.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Activités physiques et sportives</td><td>1</td><td>24,0h</td><td>Gestion de l'esprit d'équipe.</td></tr>
 
                     </tbody>
                 </table>
@@ -247,23 +254,23 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Algèbre 4</td><td>2</td><td>39,0h</td><td>Réduction d'endomorphisme (valeurs/vecteurs propres), décompositions (LU, Frobenius, Jordan), exponentielle.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Analyse 3</td><td>2</td><td>33,0h</td><td>Optimisation de fonctions, méthode de Newton, descente de gradient, dérivées partielles, matrice Hessienne.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Développement web</td><td>2</td><td>24,0h</td><td>Création Web/API (HTML, CSS, JS), PHP, POO en PHP et manipulation de bases de données.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Prog. Orientée Objet en C#</td><td>2,5</td><td>45,0h</td><td>Classes, encapsulation, héritage, polymorphisme, gestion des exceptions, collections, généricité.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Ondes électromagnétiques</td><td>2</td><td>42,0h</td><td>Propagation des ondes (OPPM), vecteur de Poynting, effet de peau, polarisation, milieux diélectriques.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Induction électromagnétique</td><td>1,5</td><td>21,0h</td><td>ARQS, champ électromoteur, lois de Lenz, inductances propre et mutuelle, couplages de circuits.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Phénomène de transport et diffusion</td><td>1,5</td><td>21,0h</td><td>Diffusion des particules (loi de Fick), diffusion thermique (Fourier), résistances thermiques.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Intro. à la physique quantique</td><td>1</td><td>15,0h</td><td>Notion ondes/particules, équation de Schrödinger, postulats quantiques, oscillateur harmonique à 1D.</td></tr>
-<tr><td>Robotique</td><td>Prog. des robots mobiles</td><td>3,5</td><td>13,5h</td><td>Microcontrôleurs (Arduino), programmation de mouvements (robots hexapodes), mini-projet d'adressage.</td></tr>
-<tr><td>Robotique</td><td>Cinématique du solide</td><td>2,5</td><td>24,0h</td><td>Torseurs cinématiques, centres instantanés de rotation (CIR), engrenages (épicycloïdaux) et schémas.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Stage étudiant 1</td><td>4</td><td>0,0h</td><td>Stage ouvrier/technicien d'1 mois, développement de compétences autonomes et communication.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Éthique techno. et numérique</td><td>1</td><td>18,0h</td><td>Débats éthiques sur les pratiques techno-scientifiques et les impacts sociétaux.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Comm. et expression orale 2</td><td>1</td><td>15,0h</td><td>Techniques de présentation, écoute active, gestion du trac.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Anglais</td><td>2</td><td>27,0h</td><td>Anglais professionnel.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV2</td><td>2</td><td>27,0h</td><td>Italien / Espagnol / Corse pro.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV3 Option</td><td>1</td><td>27,0h</td><td>Langue 3.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Sport</td><td>1</td><td>24,0h</td><td>Renforcement sportif.</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Algèbre 4</td><td>2</td><td>39,0h</td><td>Réduction d'endomorphisme (valeurs/vecteurs propres), décompositions (LU, Frobenius, Jordan), exponentielle.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Analyse 3</td><td>2</td><td>33,0h</td><td>Optimisation de fonctions, méthode de Newton, descente de gradient, dérivées partielles, matrice Hessienne.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Développement web</td><td>2</td><td>24,0h</td><td>Création Web/API (HTML, CSS, JS), PHP, POO en PHP et manipulation de bases de données.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Prog. Orientée Objet en C#</td><td>2,5</td><td>45,0h</td><td>Classes, encapsulation, héritage, polymorphisme, gestion des exceptions, collections, généricité.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Ondes électromagnétiques</td><td>2</td><td>42,0h</td><td>Propagation des ondes (OPPM), vecteur de Poynting, effet de peau, polarisation, milieux diélectriques.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Induction électromagnétique</td><td>1,5</td><td>21,0h</td><td>ARQS, champ électromoteur, lois de Lenz, inductances propre et mutuelle, couplages de circuits.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Phénomène de transport et diffusion</td><td>1,5</td><td>21,0h</td><td>Diffusion des particules (loi de Fick), diffusion thermique (Fourier), résistances thermiques.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Intro. à la physique quantique</td><td>1</td><td>15,0h</td><td>Notion ondes/particules, équation de Schrödinger, postulats quantiques, oscillateur harmonique à 1D.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Prog. des robots mobiles</td><td>3,5</td><td>13,5h</td><td>Microcontrôleurs (Arduino), programmation de mouvements (robots hexapodes), mini-projet d'adressage.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Cinématique du solide</td><td>2,5</td><td>24,0h</td><td>Torseurs cinématiques, centres instantanés de rotation (CIR), engrenages (épicycloïdaux) et schémas.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Stage étudiant 1</td><td>4</td><td>0,0h</td><td>Stage ouvrier/technicien d'1 mois, développement de compétences autonomes et communication.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Éthique techno. et numérique</td><td>1</td><td>18,0h</td><td>Débats éthiques sur les pratiques techno-scientifiques et les impacts sociétaux.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Comm. et expression orale 2</td><td>1</td><td>15,0h</td><td>Techniques de présentation, écoute active, gestion du trac.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Anglais</td><td>2</td><td>27,0h</td><td>Anglais professionnel.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV2</td><td>2</td><td>27,0h</td><td>Italien / Espagnol / Corse pro.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV3 Option</td><td>1</td><td>27,0h</td><td>Langue 3.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Sport</td><td>1</td><td>24,0h</td><td>Renforcement sportif.</td></tr>
 
                     </tbody>
                 </table>
@@ -287,24 +294,25 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Algorithmique appliquée</td><td>2</td><td>21,0h</td><td>Implémentation (C/Python) d'algorithmes complexes, tris, arbres, graphes, POO appliquée.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>UML et Design pattern</td><td>2,5</td><td>33,0h</td><td>Modélisation UML (cas d'utilisation, classes, états-transitions) et mise en place de patrons de conception.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Réseaux de capteurs</td><td>1,5</td><td>24,0h</td><td>Adressage IPv6, protocoles pour réseaux ad-hoc/noeuds mobiles, efficacité énergétique, tolérance aux pannes.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Remise à niveau en Physique</td><td>1</td><td>21,0h</td><td>Synthèse de mécanique et d'électrocinétique (régimes continu, transitoire, sinusoïdal) pour remise à niveau.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Automatique et info. indus.</td><td>2</td><td>24,0h</td><td>Correcteurs PID, réglage de boucle fermée, réponses temporelles/fréquentielles (Bode/Black/Nyquist).</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Assemblage et cotation</td><td>2</td><td>25,5h</td><td>Concepts GPS, chaînes de cotes, contrôle métrologique en 3D (Fusion 360) et protocoles de vérification.</td></tr>
-<tr><td>Robotique</td><td>Conception de pièces</td><td>2</td><td>19,5h</td><td>Outils CAO, esquisses, extrusions, contraintes d'assemblage, impression 3D et rétro-ingénierie.</td></tr>
-<tr><td>Robotique</td><td>Programmation embarquée</td><td>2</td><td>16,5h</td><td>Programmation de microcontrôleurs (Arduino/STM32), protocoles I2C/SPI, fonctions d'interruptions.</td></tr>
-<tr><td>Robotique</td><td>Instrumentation industrielle</td><td>2</td><td>33,0h</td><td>Étalonnage, caractéristiques des capteurs (actifs/passifs), contrôle de moteurs CC/vérins, self sensing.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Insertion Professionnelle 2</td><td>1,5</td><td>21,0h</td><td>CV Vidéo, optimisation LinkedIn, conduite d'entretiens et réseau.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Recherche stage/apprentissage</td><td>0,5</td><td>9,0h</td><td>Suivi personnalisé de recherche d'entreprise et d'embauche.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Intro à l'économie et gestion</td><td>1,5</td><td>24,0h</td><td>Macro/microéconomie, structure de l'entreprise, indicateurs financiers, cycles économiques, veille.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Management de projet</td><td>1</td><td>18,0h</td><td>Leadership, animation de réunions, suivi d'indicateurs et résolution de situations conflictuelles.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Créativité et innovation</td><td>2</td><td>18,0h</td><td>Design thinking, TRIZ, MVP, prototypage et business models.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Éloquence</td><td>1</td><td>13,5h</td><td>Rhétorique, gestion d'émotions, plaidoiries et concours d'éloquence.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Anglais</td><td>2</td><td>33,0h</td><td>Langue et culture anglophone, certification TOEIC.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV2</td><td>2</td><td>33,0h</td><td>Renforcement langue 2.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>LV3 Option</td><td>1</td><td>33,0h</td><td>Plurilinguisme.</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Algorithmique appliquée</td><td>2</td><td>21,0h</td><td>Implémentation (C/Python) d'algorithmes complexes, tris, arbres, graphes, POO appliquée.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>UML et Design pattern</td><td>2,5</td><td>33,0h</td><td>Modélisation UML (cas d'utilisation, classes, états-transitions) et mise en place de patrons de conception.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Initiation à l'intelligence artificielle</td><td>2,5</td><td>39,0h</td><td>IA et jeux (A*, Minimax, Monte Carlo), optimisation (voyageur de commerce, algorithme de Little, recuit simulé) et Machine Learning (classification bayésienne, arbres de décision, réseaux de neurones).</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Réseaux de capteurs</td><td>1,5</td><td>24,0h</td><td>Adressage IPv6, protocoles pour réseaux ad-hoc/noeuds mobiles, efficacité énergétique, tolérance aux pannes.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Remise à niveau en Physique</td><td>1</td><td>21,0h</td><td>Synthèse de mécanique et d'électrocinétique (régimes continu, transitoire, sinusoïdal) pour remise à niveau.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Automatique et info. indus.</td><td>2</td><td>24,0h</td><td>Correcteurs PID, réglage de boucle fermée, réponses temporelles/fréquentielles (Bode/Black/Nyquist).</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Assemblage et cotation</td><td>2</td><td>25,5h</td><td>Concepts GPS, chaînes de cotes, contrôle métrologique en 3D (Fusion 360) et protocoles de vérification.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Conception de pièces</td><td>2</td><td>19,5h</td><td>Outils CAO, esquisses, extrusions, contraintes d'assemblage, impression 3D et rétro-ingénierie.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Programmation embarquée</td><td>2</td><td>16,5h</td><td>Programmation de microcontrôleurs (Arduino/STM32), protocoles I2C/SPI, fonctions d'interruptions.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Instrumentation industrielle</td><td>2</td><td>33,0h</td><td>Étalonnage, caractéristiques des capteurs (actifs/passifs), contrôle de moteurs CC/vérins, self sensing.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Insertion Professionnelle 2</td><td>1,5</td><td>21,0h</td><td>CV Vidéo, optimisation LinkedIn, conduite d'entretiens et réseau.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Recherche stage/apprentissage</td><td>0,5</td><td>9,0h</td><td>Suivi personnalisé de recherche d'entreprise et d'embauche.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Intro à l'économie et gestion</td><td>1,5</td><td>24,0h</td><td>Macro/microéconomie, structure de l'entreprise, indicateurs financiers, cycles économiques, veille.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Management de projet</td><td>1</td><td>18,0h</td><td>Leadership, animation de réunions, suivi d'indicateurs et résolution de situations conflictuelles.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Créativité et innovation</td><td>2</td><td>18,0h</td><td>Design thinking, TRIZ, MVP, prototypage et business models.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Éloquence</td><td>1</td><td>13,5h</td><td>Rhétorique, gestion d'émotions, plaidoiries et concours d'éloquence.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Anglais</td><td>2</td><td>33,0h</td><td>Langue et culture anglophone, certification TOEIC.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV2</td><td>2</td><td>33,0h</td><td>Renforcement langue 2.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>LV3 Option</td><td>1</td><td>33,0h</td><td>Plurilinguisme.</td></tr>
 
                     </tbody>
                 </table>
@@ -323,22 +331,22 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Prog. d'une application Web</td><td>2</td><td>21,0h</td><td>Frameworks Python (Django, Streamlit), vues, gabarits et API.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Prog. mobile Android</td><td>2,5</td><td>39,0h</td><td>App. Kotlin/Java, interfaces graphiques (OpenGL ES), cycle de vie d'activités, persistance SQLite.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Bases de données 2</td><td>2</td><td>30,0h</td><td>Comparaison relationnel vs NoSQL, formats (documents, clés-valeurs, graphes) et passage à l'échelle.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Data Mining</td><td>1,5</td><td>18,0h</td><td>Arbres de décision, K-means, ACP, nettoyage, règles d'association et segmentation de données.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Prototypage</td><td>2</td><td>18,0h</td><td>Découpe laser/jet d'eau, stratoconception, routage de cartes électroniques, impression 3D experte.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Matériaux</td><td>1,5</td><td>24,0h</td><td>Structures des matériaux (mécaniques/fonctionnels), comportement des solides, élaboration et fatigue.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Usinage</td><td>1,5</td><td>19,5h</td><td>Commande numérique (MOCN), conception du processus d'usinage, contrat de phase et coût de gamme.</td></tr>
-<tr><td>Robotique</td><td>Prog. sur objet connecté (IoT)</td><td>2,5</td><td>21,0h</td><td>Protocoles IoT (MQTT, CoAP), noyau Linux embarqué, Raspberry Pi et réseaux/systèmes de fichiers.</td></tr>
-<tr><td>Robotique</td><td>Cinématique robots mobiles</td><td>2</td><td>25,5h</td><td>Modélisation d'engins volants/roulants, contraintes non-holonomes, quadricoptères et véhicules omnidirectionnels.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Stage étudiant 2</td><td>5</td><td>0,0h</td><td>Stage de niveau assistant-ingénieur (2 mois minimum), éco-conception ou IA.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Économie et gestion fin. 2</td><td>2</td><td>24,0h</td><td>Bilan comptable, ratios, plans de financement, budgets prévisionnels et modes de crédit.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Comm. interculturelle</td><td>1</td><td>12,0h</td><td>Pratiques ethno-relatives, prévention des stéréotypes et management international.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Gestion des risques</td><td>1</td><td>12,0h</td><td>Analyse des risques pro (APR), arbres de causes, prévention et plan de traitement.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Dév. Durable et RSE</td><td>1,5</td><td>21,0h</td><td>Normes de durabilité, gestion des impacts de l'entreprise, évaluation de la performance RSE.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Hist. et philo. des sciences</td><td>1</td><td>18,0h</td><td>Méthode scientifique, épistémologie, éthique environnementale des techno-sciences.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Perfectionnement B2 Anglais, Langue 2, ou Options (12 h chacune).</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Prog. d'une application Web</td><td>2</td><td>21,0h</td><td>Frameworks Python (Django, Streamlit), vues, gabarits et API.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Prog. mobile Android</td><td>2,5</td><td>39,0h</td><td>App. Kotlin/Java, interfaces graphiques (OpenGL ES), cycle de vie d'activités, persistance SQLite.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Bases de données 2</td><td>2</td><td>30,0h</td><td>Comparaison relationnel vs NoSQL, formats (documents, clés-valeurs, graphes) et passage à l'échelle.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Data Mining</td><td>1,5</td><td>18,0h</td><td>Arbres de décision, K-means, ACP, nettoyage, règles d'association et segmentation de données.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Prototypage</td><td>2</td><td>18,0h</td><td>Découpe laser/jet d'eau, stratoconception, routage de cartes électroniques, impression 3D experte.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Matériaux</td><td>1,5</td><td>24,0h</td><td>Structures des matériaux (mécaniques/fonctionnels), comportement des solides, élaboration et fatigue.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Usinage</td><td>1,5</td><td>19,5h</td><td>Commande numérique (MOCN), conception du processus d'usinage, contrat de phase et coût de gamme.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Prog. sur objet connecté (IoT)</td><td>2,5</td><td>21,0h</td><td>Protocoles IoT (MQTT, CoAP), noyau Linux embarqué, Raspberry Pi et réseaux/systèmes de fichiers.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Cinématique robots mobiles</td><td>2</td><td>25,5h</td><td>Modélisation d'engins volants/roulants, contraintes non-holonomes, quadricoptères et véhicules omnidirectionnels.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Stage étudiant 2</td><td>5</td><td>0,0h</td><td>Stage de niveau assistant-ingénieur (2 mois minimum), éco-conception ou IA.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Économie et gestion fin. 2</td><td>2</td><td>24,0h</td><td>Bilan comptable, ratios, plans de financement, budgets prévisionnels et modes de crédit.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Comm. interculturelle</td><td>1</td><td>12,0h</td><td>Pratiques ethno-relatives, prévention des stéréotypes et management international.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Gestion des risques</td><td>1</td><td>12,0h</td><td>Analyse des risques pro (APR), arbres de causes, prévention et plan de traitement.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Dév. Durable et RSE</td><td>1,5</td><td>21,0h</td><td>Normes de durabilité, gestion des impacts de l'entreprise, évaluation de la performance RSE.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Hist. et philo. des sciences</td><td>1</td><td>18,0h</td><td>Méthode scientifique, épistémologie, éthique environnementale des techno-sciences.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Perfectionnement B2 Anglais, Langue 2, ou Options (12 h chacune).</td></tr>
 
                     </tbody>
                 </table>
@@ -362,24 +370,24 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Informatique Quantique</td><td>2</td><td>25,5h</td><td>Portes à Qubits multiples, systèmes intriqués, algorithmes de Shor, Deutsch, Grover et circuits.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>La réalité virtuelle</td><td>2</td><td>27,0h</td><td>Dispositifs RV, moteurs de jeu (Unity), rendu stéréoscopique et développement de mondes.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Vision par ordinateur</td><td>1,5</td><td>24,0h</td><td>Prétraitement, filtrage de bruits (FTT), segmentation, morphologie et analyse de motifs visuels.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Cybersécurité</td><td>2</td><td>35,0h</td><td>Sécurisation des données massives/capteurs, protocoles de chiffrement et gestion d'intrusions.</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Conception cartes électriques</td><td>2</td><td>22,5h</td><td>Saisie de schémas (PCB), routage multicouches, compatibilité électromagnétique (CEM).</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Traitement du signal</td><td>2,5</td><td>34,5h</td><td>Représentation spectrale (Fourier, Welch), filtres causaux (RII/RIF), filtre de Wiener et corrélation.</td></tr>
-<tr><td>Robotique</td><td>La robotique au service des Hommes</td><td>1</td><td>15,0h</td><td>Impacts de la robotique (santé, social, vie courante) et analyses des problématiques d'usages.</td></tr>
-<tr><td>Robotique</td><td>Interactions Hommes/Machines</td><td>2,5</td><td>25,5h</td><td>Modalités d'interaction (gestuelles, oculaires, haptiques), capteurs innovants et prototypage IHM.</td></tr>
-<tr><td>Robotique</td><td>Ergonomie des interfaces</td><td>1</td><td>18,0h</td><td>Mémoire cognitive, Gestalt, lois de Fitts/Hick, évaluation usabilité et design UX/UI.</td></tr>
-<tr><td>Robotique</td><td>Introduction aux Low Tech</td><td>1</td><td>13,0h</td><td>Conscience environnementale, conception minimaliste, réparabilité et sobriété matérielle.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Introduction au droit du travail</td><td>1</td><td>12,0h</td><td>Contrats de travail (ruptures, clauses), représentation salariale et conflits collectifs.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Hygiène, santé et sécurité</td><td>1</td><td>6,0h</td><td>Méthodes d'évaluation du risque au travail (biologique, TMS, chimique), cadre légal employeur.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Mini-Entreprise L</td><td>2,5</td><td>60,0h</td><td>Développement avancé, plan d'affaire, pitch aux incubateurs et pôle pépite.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Recherche de stage 2</td><td>0,5</td><td>9,0h</td><td>Soutien à la candidature.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Éco-conception / éco-innovation</td><td>1</td><td>15,0h</td><td>Eco-audit (CES Selector), DfE (Design for Environment), recyclage et normes cycle de vie.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Orga. et conduite de réunion</td><td>0,5</td><td>9,0h</td><td>Planification d'ordres du jour, dynamique de groupe, gestion des temps de parole.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Marketing pour l'ingénieur</td><td>1</td><td>18,0h</td><td>Matrices (SWOT, Porter), positionnement produit, politique de prix, canaux de vente et campagnes.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Langue de perfectionnement (Anglais, L2, L3) (31,5h chacune).</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Informatique Quantique</td><td>2</td><td>25,5h</td><td>Portes à Qubits multiples, systèmes intriqués, algorithmes de Shor, Deutsch, Grover et circuits.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>La réalité virtuelle</td><td>2</td><td>27,0h</td><td>Dispositifs RV, moteurs de jeu (Unity), rendu stéréoscopique et développement de mondes.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Vision par ordinateur</td><td>1,5</td><td>24,0h</td><td>Prétraitement, filtrage de bruits (FTT), segmentation, morphologie et analyse de motifs visuels.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Cybersécurité</td><td>2</td><td>35,0h</td><td>Sécurisation des données massives/capteurs, protocoles de chiffrement et gestion d'intrusions.</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Conception cartes électriques</td><td>2</td><td>22,5h</td><td>Saisie de schémas (PCB), routage multicouches, compatibilité électromagnétique (CEM).</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Traitement du signal</td><td>2,5</td><td>34,5h</td><td>Représentation spectrale (Fourier, Welch), filtres causaux (RII/RIF), filtre de Wiener et corrélation.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>La robotique au service des Hommes</td><td>1</td><td>15,0h</td><td>Impacts de la robotique (santé, social, vie courante) et analyses des problématiques d'usages.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Interactions Hommes/Machines</td><td>2,5</td><td>25,5h</td><td>Modalités d'interaction (gestuelles, oculaires, haptiques), capteurs innovants et prototypage IHM.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Ergonomie des interfaces</td><td>1</td><td>18,0h</td><td>Mémoire cognitive, Gestalt, lois de Fitts/Hick, évaluation usabilité et design UX/UI.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Introduction aux Low Tech</td><td>1</td><td>13,0h</td><td>Conscience environnementale, conception minimaliste, réparabilité et sobriété matérielle.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Introduction au droit du travail</td><td>1</td><td>12,0h</td><td>Contrats de travail (ruptures, clauses), représentation salariale et conflits collectifs.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Hygiène, santé et sécurité</td><td>1</td><td>6,0h</td><td>Méthodes d'évaluation du risque au travail (biologique, TMS, chimique), cadre légal employeur.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Mini-Entreprise L</td><td>2,5</td><td>60,0h</td><td>Développement avancé, plan d'affaire, pitch aux incubateurs et pôle pépite.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Recherche de stage 2</td><td>0,5</td><td>9,0h</td><td>Soutien à la candidature.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Éco-conception / éco-innovation</td><td>1</td><td>15,0h</td><td>Eco-audit (CES Selector), DfE (Design for Environment), recyclage et normes cycle de vie.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Orga. et conduite de réunion</td><td>0,5</td><td>9,0h</td><td>Planification d'ordres du jour, dynamique de groupe, gestion des temps de parole.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Marketing pour l'ingénieur</td><td>1</td><td>18,0h</td><td>Matrices (SWOT, Porter), positionnement produit, politique de prix, canaux de vente et campagnes.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Langue de perfectionnement (Anglais, L2, L3) (31,5h chacune).</td></tr>
 
                     </tbody>
                 </table>
@@ -398,24 +406,24 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Machine learning</td><td>2,5</td><td>36,0h</td><td>Algorithmes Scikit-learn (SVM, K-means, Random Forest, Régression), Courbes ROC et hyperparamètres.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>La réalité augmentée</td><td>2,5</td><td>30,0h</td><td>Technologies de suivi (ARCore), superposition du virtuel, applications mobiles haptiques et conception 3D.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Deep learning</td><td>3</td><td>27,0h</td><td>Perceptrons, Rétropropagation, CNN, optimisation (dropout, early stopping, régularisation).</td></tr>
-<tr><td>Physique et sci. de l'ingénieur</td><td>TS signaux phys.</td><td>2</td><td>36,0h</td><td>Analyse ECG, imagerie (segmentation d'artères), réseaux de capteurs corporels et échographie Doppler.</td></tr>
-<tr><td>Physique et sci. de l'ingénieur</td><td>Filtres Kalman</td><td>2</td><td>36,0h</td><td>Algorithmes LMS, Filtres de Kalman (EKF, discrets), RTOS et intégration de contraintes temps-réel.</td></tr>
-<tr><td>Robotique</td><td>Social Robotics</td><td>2</td><td>21,0h</td><td>Robots d'assistance et compagnons (Pepper/Paro), anthropomorphisme, téléprésence, empathie homme/robot.</td></tr>
-<tr><td>Robotique</td><td>Bio-inspirée</td><td>2</td><td>21,0h</td><td>Locomotion (Cheetah), navigation visuelle (boussole céleste, mouche), préhension par robotique souple.</td></tr>
-<tr><td>Robotique</td><td>Chaînes industrielles robotiques</td><td>1,5</td><td>9,0h</td><td>Architectures cellulaires d'usine, sécurité des cobots, intégration de la robotique en production.</td></tr>
-<tr><td>Robotique</td><td>Systèmes robotiques autonomes</td><td>2,5</td><td>39,0h</td><td>Télémétrie/odométrie (LIDAR, sonar), aliasing perceptuel, architectures (hiérarchiques, réactives).</td></tr>
-<tr><td>Robotique</td><td>Robotic operating system (ROS)</td><td>1,5</td><td>16,5h</td><td>Création/compilation de paquets ROS, "nodes", "topics" et intégration de capteurs robotiques.</td></tr>
-<tr><td>Robotique</td><td>IA sur env. embarqué</td><td>2</td><td>33,0h</td><td>TinyML, déploiement TensorFlow Lite sur uC (STM32/Arduino), modèles allégés pour l'edge computing.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Gestion industrielle</td><td>1</td><td>13,5h</td><td>Supply chain, contrats de sous-traitance, confiances et réseaux inter/intra-firmes.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Stage étudiant 3</td><td>4</td><td>0,0h</td><td>Stage technique axé intégration IA/Robotique, prototypage et approche systémique (2 mois).</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Manager et animer son équipe</td><td>1,5</td><td>21,0h</td><td>Management à distance, motivation (leviers), styles directoriaux, gestion des conflits.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Méthodologies de la recherche</td><td>1</td><td>18,0h</td><td>Rédaction d'articles, analyse de données, revue de littérature et rigueur scientifique/expérimentale.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Qualité et process</td><td>0,5</td><td>9,0h</td><td>Cycle PDCA, 5S, Hoshin Kanri, Kaizen, Six Sigma (DMAIC), certifications ISO 9001.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Lean : les flux</td><td>1</td><td>13,5h</td><td>TPS, JIT, SMED, traque de gaspillages et dimensionnement de lignes.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Consolidation linguistique finale. (21,0h chacune).</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Machine learning</td><td>2,5</td><td>36,0h</td><td>Algorithmes Scikit-learn (SVM, K-means, Random Forest, Régression), Courbes ROC et hyperparamètres.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>La réalité augmentée</td><td>2,5</td><td>30,0h</td><td>Technologies de suivi (ARCore), superposition du virtuel, applications mobiles haptiques et conception 3D.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Deep learning</td><td>3</td><td>27,0h</td><td>Perceptrons, Rétropropagation, CNN, optimisation (dropout, early stopping, régularisation).</td></tr>
+<tr><td class="ue-phys">Physique et sci. de l'ingénieur</td><td>TS signaux phys.</td><td>2</td><td>36,0h</td><td>Analyse ECG, imagerie (segmentation d'artères), réseaux de capteurs corporels et échographie Doppler.</td></tr>
+<tr><td class="ue-phys">Physique et sci. de l'ingénieur</td><td>Filtres Kalman</td><td>2</td><td>36,0h</td><td>Algorithmes LMS, Filtres de Kalman (EKF, discrets), RTOS et intégration de contraintes temps-réel.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Social Robotics</td><td>2</td><td>21,0h</td><td>Robots d'assistance et compagnons (Pepper/Paro), anthropomorphisme, téléprésence, empathie homme/robot.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Bio-inspirée</td><td>2</td><td>21,0h</td><td>Locomotion (Cheetah), navigation visuelle (boussole céleste, mouche), préhension par robotique souple.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Chaînes industrielles robotiques</td><td>1,5</td><td>9,0h</td><td>Architectures cellulaires d'usine, sécurité des cobots, intégration de la robotique en production.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Systèmes robotiques autonomes</td><td>2,5</td><td>39,0h</td><td>Télémétrie/odométrie (LIDAR, sonar), aliasing perceptuel, architectures (hiérarchiques, réactives).</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Robotic operating system (ROS)</td><td>1,5</td><td>16,5h</td><td>Création/compilation de paquets ROS, "nodes", "topics" et intégration de capteurs robotiques.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>IA sur env. embarqué</td><td>2</td><td>33,0h</td><td>TinyML, déploiement TensorFlow Lite sur uC (STM32/Arduino), modèles allégés pour l'edge computing.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Gestion industrielle</td><td>1</td><td>13,5h</td><td>Supply chain, contrats de sous-traitance, confiances et réseaux inter/intra-firmes.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Stage étudiant 3</td><td>4</td><td>0,0h</td><td>Stage technique axé intégration IA/Robotique, prototypage et approche systémique (2 mois).</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Manager et animer son équipe</td><td>1,5</td><td>21,0h</td><td>Management à distance, motivation (leviers), styles directoriaux, gestion des conflits.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Méthodologies de la recherche</td><td>1</td><td>18,0h</td><td>Rédaction d'articles, analyse de données, revue de littérature et rigueur scientifique/expérimentale.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Qualité et process</td><td>0,5</td><td>9,0h</td><td>Cycle PDCA, 5S, Hoshin Kanri, Kaizen, Six Sigma (DMAIC), certifications ISO 9001.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Lean : les flux</td><td>1</td><td>13,5h</td><td>TPS, JIT, SMED, traque de gaspillages et dimensionnement de lignes.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Consolidation linguistique finale. (21,0h chacune).</td></tr>
 
                     </tbody>
                 </table>
@@ -439,23 +447,23 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Informatique et Mathématiques</td><td>Programmation GPU</td><td>2</td><td>18,0h</td><td>CUDA C, mémoires partagées/locales, Kernels (blocks/grids), accélération de traitements lourds.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Big Data</td><td>2,5</td><td>36,0h</td><td>Hadoop, Hive, Spark, HDFS, traitement de la vélocité et du volume des données ("les 3V").</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>Deep Learning 2</td><td>2</td><td>36,0h</td><td>LSTM, RNN, GAN, Transformers (encodeurs-décodeurs), réduction de la dimensionnalité d'image.</td></tr>
-<tr><td>Informatique et Mathématiques</td><td>NLP</td><td>2</td><td>36,0h</td><td>Extraction textuelle, TF-IDF, Topic Modelling (LDA), POS-Tagging, réseaux (Word2Vec, reconnaissance).</td></tr>
-<tr><td>Physique et sciences de l'ingénieur</td><td>Modélisation éléments-finis</td><td>2</td><td>16,5h</td><td>Mécanique des milieux continus, maillages, formes variationnelles et discrétisation spatiale/temporelle.</td></tr>
-<tr><td>Robotique</td><td>IHM Avancé</td><td>2,5</td><td>43,5h</td><td>BCI (signaux EEG), substitution sensorielle, mesures eye/motion-tracking, interfaces multimodales.</td></tr>
-<tr><td>Robotique</td><td>Nav. terrain accidenté</td><td>2,5</td><td>43,5h</td><td>Robotique à pattes (legged), modèles de pendules (LIP/SLIP), contrôleurs Hybrid-zero.</td></tr>
-<tr><td>Robotique</td><td>Cobotique</td><td>2,5</td><td>34,5h</td><td>Apprentissage par mimétisme/geste, limitations d'efforts, robot suiveur et utilisation des exosquelettes.</td></tr>
-<tr><td>Robotique</td><td>Essaim</td><td>2,5</td><td>34,5h</td><td>Planification distribuée, protocoles intra-robots, contrôles décentralisés/hiérarchiques en flottes.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Projet robotique</td><td>7</td><td>0,0h</td><td>Application grandeur nature : cahier des charges client, business plan, MVP, gestion et intégration.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Insertion professionnelle 3</td><td>1</td><td>9,0h</td><td>Entraînements aux pitchs, négociation de salaires et rencontres ciblées par profils/réseaux pro.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Propriété intellectuelle</td><td>1</td><td>6,0h</td><td>Brevets, droit d'auteurs, enveloppe Soleau et stratégies internationales de protection.</td></tr>
-<tr><td>Sciences de l'entreprise</td><td>Acc. création d'entreprise (Op.)</td><td>-</td><td>9,0h</td><td>Optionnel: Business model, levée de fonds, incubateurs, coaching (Femu quì).</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Conduire un entretien pro.</td><td>0,5</td><td>6,0h</td><td>Outils pour manager : fixation d'objectifs, évaluations de collaborateurs, feedbacks, GPEC.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Résolution de pb complexes</td><td>0,5</td><td>6,0h</td><td>Approches systémiques en entreprise, analyse d'interactions bloquées, et émergence de l'intelligence collective.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Management de l'innovation</td><td>0,5</td><td>9,0h</td><td>Empathy map, Lean Canvas, Océan bleu, design ethnographique, maquettage et Pitch deck final.</td></tr>
-<tr><td>Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Achèvement des blocs linguistiques (25,5h chacune).</td></tr>
+        <tr><td class="ue-info">Informatique et Mathématiques</td><td>Programmation GPU</td><td>2</td><td>18,0h</td><td>CUDA C, mémoires partagées/locales, Kernels (blocks/grids), accélération de traitements lourds.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Big Data</td><td>2,5</td><td>36,0h</td><td>Hadoop, Hive, Spark, HDFS, traitement de la vélocité et du volume des données ("les 3V").</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>Deep Learning 2</td><td>2</td><td>36,0h</td><td>LSTM, RNN, GAN, Transformers (encodeurs-décodeurs), réduction de la dimensionnalité d'image.</td></tr>
+<tr><td class="ue-info">Informatique et Mathématiques</td><td>NLP</td><td>2</td><td>36,0h</td><td>Extraction textuelle, TF-IDF, Topic Modelling (LDA), POS-Tagging, réseaux (Word2Vec, reconnaissance).</td></tr>
+<tr><td class="ue-phys">Physique et sciences de l'ingénieur</td><td>Modélisation éléments-finis</td><td>2</td><td>16,5h</td><td>Mécanique des milieux continus, maillages, formes variationnelles et discrétisation spatiale/temporelle.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>IHM Avancé</td><td>2,5</td><td>43,5h</td><td>BCI (signaux EEG), substitution sensorielle, mesures eye/motion-tracking, interfaces multimodales.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Nav. terrain accidenté</td><td>2,5</td><td>43,5h</td><td>Robotique à pattes (legged), modèles de pendules (LIP/SLIP), contrôleurs Hybrid-zero.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Cobotique</td><td>2,5</td><td>34,5h</td><td>Apprentissage par mimétisme/geste, limitations d'efforts, robot suiveur et utilisation des exosquelettes.</td></tr>
+<tr><td class="ue-robo">Robotique</td><td>Essaim</td><td>2,5</td><td>34,5h</td><td>Planification distribuée, protocoles intra-robots, contrôles décentralisés/hiérarchiques en flottes.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Projet robotique</td><td>7</td><td>0,0h</td><td>Application grandeur nature : cahier des charges client, business plan, MVP, gestion et intégration.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Insertion professionnelle 3</td><td>1</td><td>9,0h</td><td>Entraînements aux pitchs, négociation de salaires et rencontres ciblées par profils/réseaux pro.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Propriété intellectuelle</td><td>1</td><td>6,0h</td><td>Brevets, droit d'auteurs, enveloppe Soleau et stratégies internationales de protection.</td></tr>
+<tr><td class="ue-entr">Sciences de l'entreprise</td><td>Acc. création d'entreprise (Op.)</td><td>-</td><td>9,0h</td><td>Optionnel: Business model, levée de fonds, incubateurs, coaching (Femu quì).</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Conduire un entretien pro.</td><td>0,5</td><td>6,0h</td><td>Outils pour manager : fixation d'objectifs, évaluations de collaborateurs, feedbacks, GPEC.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Résolution de pb complexes</td><td>0,5</td><td>6,0h</td><td>Approches systémiques en entreprise, analyse d'interactions bloquées, et émergence de l'intelligence collective.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Management de l'innovation</td><td>0,5</td><td>9,0h</td><td>Empathy map, Lean Canvas, Océan bleu, design ethnographique, maquettage et Pitch deck final.</td></tr>
+<tr><td class="ue-shs">Sciences humaines et sociales</td><td>Langues</td><td>(var.)</td><td>(var.)</td><td>Achèvement des blocs linguistiques (25,5h chacune).</td></tr>
 
                     </tbody>
                 </table>
@@ -474,7 +482,7 @@
                         </tr>
                     </thead>
                     <tbody>
-        <tr><td>Sciences de l'entreprise</td><td>Projet de fin d'étude</td><td>30</td><td>0,0h</td><td>Mission longue en entreprise : prototypage, déploiement IoT/IA, éthique, approche système et résolution de complexités complexes de bout en bout.</td></tr>
+        <tr><td class="ue-entr">Sciences de l'entreprise</td><td>Projet de fin d'étude</td><td>30</td><td>0,0h</td><td>Mission longue en entreprise : prototypage, déploiement IoT/IA, éthique, approche système et résolution de complexités complexes de bout en bout.</td></tr>
 
                     </tbody>
                 </table>
